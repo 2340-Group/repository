@@ -31,7 +31,16 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+            if (input == null) {
+                return null;
+            }
+            if (input.length() <= 2) {
+                return input;
+            }
+            String sub1 = input.substring(0, 2);
+            String sub2 = input.substring(2);
+            String rotated = sub2 + sub1;
+            return rotated;
 	}
 	
 	/**
