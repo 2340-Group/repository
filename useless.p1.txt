@@ -1,5 +1,0 @@
-name: Kia Hadjkhan
-GTID : khadjkhan3
-
-I might be working on a leveling system for extra credit to add some additional
-form of progression to the game.
