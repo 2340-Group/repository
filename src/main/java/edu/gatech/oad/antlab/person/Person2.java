@@ -1,5 +1,8 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.Collections;
+import java.util.ArrayList;
+
 /**
  *  A simple class for person 2
  *  returns their name and a
@@ -30,8 +33,18 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+            String output = "";
+            ArrayList<Character> letters = new ArrayList<Character>(input.length());
+            for (int i = 0; i < input.length(); i++) {
+                letters.add(input.charAt(i));
+            }
+            
+            Collections.shuffle(letters);
+            for (char c : letters) {
+                output += c;
+            }
+          
+            return output;
 	}
 	/**
 	 * Return a string rep of this object
@@ -42,6 +55,6 @@ public class Person2 {
 	 *         object
 	 */
 	public String toString(String input) {
-	  return name + calc(input);
+            return name + calc(input);
 	}
 }
