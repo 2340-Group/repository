@@ -41,8 +41,14 @@ public class Person3 {
 	 * @param input the string to be reversed
 	 * @return the reversed string
 	 */
-	private String calc(String input) {
-	  //Person 3 put your implementation here
-	  return null;
+	public String calc(String input) {
+	  String ans = "";
+	  while (input.length() > 0) {
+		ans = ans + input.substring(input.length()-1);
+		input = input.substring(0, input.length()-1);
+	  }
+	  return ans;
 	}
+	
+	
 }
