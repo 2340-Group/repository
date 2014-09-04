@@ -3,13 +3,6 @@ defaultTasks  'jar'
 
 apply plugin: 'java'
 
-//compiles and builds the project
-task compileJava << {
-
-
-
-}
-
 // compiles the unit tests for the project
 task compileTest << {
     
@@ -17,28 +10,20 @@ task compileTest << {
 
 }
 
-//creates the html documentation for the project
-task javadoc (type: JavaDoc) {
-    source = sourceSets.main.allJava
- //   source = edu.gatech.oad.antlab
-}
-
-//removes all the files created by this project
-task clean (type: Delete){
-    delete 'build'
-
-
-}
-
 //Set up library repositories
 repositories {
-    lib.resources()
+ //   compile files('lib.resources.jar')
+
+//    mavenCentral()
+ //   lib.resources.jar
 }
 
-//creates the executable jar file for this project
-task jar << {
-     jar cf jrule3.jar edu.gatech.oad.antlab.person.* edu.gatech.oad.antlab.pkg1.*  edu.gatech.oad.antlab.pkg2.* 
-}
+//dependencies{
+  //  compile name: 'lib.resources'
+//}
+
+
+
 
 //Set up some variables (properties)
 sourceCompatibility = 1.7
@@ -47,6 +32,29 @@ version = '1.0'
 //creates the executable jar file for this project
 jar {
     manifest {
-        attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'AntLabMain'
+        attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pk1.AntLabMain'
     }
 }
+
+
+
+
+//compiles and builds the project
+//task compileJava << {
+//}
+
+//creates the html documentation for the project
+//task javadoc (type: JavaDoc) {
+//    source = sourceSets.main.allJava
+   //   source = edu.gatech.oad.antlab
+//}
+
+//removes all the files created by this project
+//task clean (type: Delete){
+//  delete 'build'
+//}
+
+//creates the executable jar file for this project
+//task jar << {
+//    
+//}
