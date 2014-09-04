@@ -10,20 +10,11 @@ task compileTest << {
 
 }
 
-//Set up library repositories
-repositories {
- //   compile files('lib.resources.jar')
-
-//    mavenCentral()
- //   lib.resources.jar
+//Set up library dependencies (pkg3)
+dependencies{
+    compile files('.lib.resources.jar')
+    compile fileTree(dir: 'lib', include: '*.jar')
 }
-
-//dependencies{
-  //  compile name: 'lib.resources'
-//}
-
-
-
 
 //Set up some variables (properties)
 sourceCompatibility = 1.7
