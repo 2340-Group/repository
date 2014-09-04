@@ -55,26 +55,26 @@ import edu.gatech.oad.antlab.pkg2.*;
         String toPrint = 
             ant11.getMessage() + ant12.getMessage() + ant21.getMessage()
           + ant22.getMessage() + ant31.getMessage();
-		  //Person1 replace P1 with your name
-		  //and gburdell1 with your gt id
-		  Person1 p1 = new Person1("Kia Hadjkhan");
-		  toPrint += p1.toString("khadjkhan3");
-		  //Person2 replace P2 with your name
-		  //and gburdell with your gt id
-		  Person2 p2 = new Person2("Jesse Chen");
-		  toPrint += p2.toString("jchen428");
-		  //Person3 replace P3 with your name
-		  //and gburdell3 with your gt id
-		  Person3 p3 = new Person3("Diego Lewis");
-		  toPrint += p3.toString("dlewis46");
-                  //Person4 replace P4 with your name
-                  //and gburdell4 with your gt id
-                  Person4 p4 = new Person4("Ryan Vazquez");
-                  toPrint += p4.toString("rvazquez8");
-                  //Person5 replace P4 with your name
-                  //and gburdell5 with your gt id
-                  Person5 p5 = new Person5("Jamie Rule");
-                  toPrint += p5.toString("jrule3");
+            //Person1 replace P1 with your name
+            //and gburdell1 with your gt id
+            Person1 p1 = new Person1("Kia Hadjkhan");
+            toPrint += p1.toString("khadjkhan3");
+            //Person2 replace P2 with your name
+            //and gburdell with your gt id
+            Person2 p2 = new Person2("Jesse Chen");
+            toPrint += p2.toString("jchen428");
+            //Person3 replace P3 with your name
+            //and gburdell3 with your gt id
+            Person3 p3 = new Person3("Diego Lewis");
+            toPrint += p3.toString("dlewis46");
+            //Person4 replace P4 with your name
+            //and gburdell4 with your gt id
+            Person4 p4 = new Person4("Ryan Vazquez");
+            toPrint += p4.toString("rvazquez8");
+            //Person5 replace P4 with your name
+            //and gburdell5 with your gt id
+            Person5 p5 = new Person5("Jamie Rule");
+            toPrint += p5.toString("jrule3");
 		  
         System.out.println(toPrint);
         
