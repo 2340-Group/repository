@@ -14,14 +14,29 @@ task intro(dependsOn: hello) << {
     println 'I am gradle'
 }
 
-//Define a simple task
-task task1 << {
+//compiles and builds the project
+task compileJava << {
     println 'Task 1'
 }
 
 
-//Define a simple task
-task task2 << {
+//compiles the unit tests for the project
+task compileTest << {
+    println 'Task 2'
+}
+
+//creates the html documentation for the project
+task javadoc << {
+    println 'Task 2'
+}
+
+//removes all the files created by this project
+task clean << {
+    println 'Task 2'
+}
+
+//creates the executable jar file for this project
+task jar << {
     println 'Task 2'
 }
 
