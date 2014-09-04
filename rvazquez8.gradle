@@ -1,5 +1,5 @@
 //Set a default task, so if I don't give a task, this (these) will be executed
-defaultTasks  'task1', 'task2'
+defaultTasks  'build', 'jar'
 
 //Import a bunch of java related tasks like compileJava, compileJavaTest, clean, javadoc, jar
 apply plugin: 'java'
