@@ -1,53 +1,22 @@
 //Set a default task, so if I don't give a task, this (these) will be executed
-defaultTasks  'build', 'jar'
+defaultTasks  'jar'
 
 //Import a bunch of java related tasks like compileJava, compileJavaTest, clean, javadoc, jar
 apply plugin: 'java'
 
-//Define a simple task ourselves to print a message
-task hello << {
-      println 'Hello World'
-}
-
-//Define a simple task that depends on another task
-task intro(dependsOn: hello) << {
-    println 'I am gradle'
-}
-
-//compiles and builds the project
-task compileJava << {
-    println 'Task 1'
-}
-
-
-//compiles the unit tests for the project
-task compileTest << {
-    println 'Task 2'
-}
-
-//creates the html documentation for the project
-task javadoc << {
-    println 'Task 2'
-}
-
-//removes all the files created by this project
-task clean << {
-    println 'Task 2'
-}
-
-//creates the executable jar file for this project
-task jar << {
-    println 'Task 2'
+//declare dependencies
+dependencies {
+    compile files('lib/resources.jar')
 }
 
 //Set up some variables (properties)
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '1.0'
 
 //Define the contents of the jar file
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Quickstart', 'Implementation-Version': version , 'Main-Class' : 'Foo'
+        attributes 'Implementation-Title': 'Milestone 2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : '../../lib.resources.jar'
     }
 }
 
