@@ -3,17 +3,10 @@ defaultTasks  'jar'
 
 apply plugin: 'java'
 
-// compiles the unit tests for the project
-task compileTest << {
-    
-
-
-}
 
 //Set up library dependencies (pkg3)
 dependencies{
-    compile files('.lib.resources.jar')
-    compile fileTree(dir: 'lib', include: '*.jar')
+    compile files('lib/resources.jar')
 }
 
 //Set up some variables (properties)
@@ -23,29 +16,8 @@ version = '1.0'
 //creates the executable jar file for this project
 jar {
     manifest {
-        attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pk1.AntLabMain'
+        attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : '../../lib/resources.jar'
+// Class-Path is specified starting in the directory that the jar file will be created in
+//Main-Class is specified starting in src/main/java
     }
 }
-
-
-
-
-//compiles and builds the project
-//task compileJava << {
-//}
-
-//creates the html documentation for the project
-//task javadoc (type: JavaDoc) {
-//    source = sourceSets.main.allJava
-   //   source = edu.gatech.oad.antlab
-//}
-
-//removes all the files created by this project
-//task clean (type: Delete){
-//  delete 'build'
-//}
-
-//creates the executable jar file for this project
-//task jar << {
-//    
-//}
