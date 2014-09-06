@@ -3,21 +3,20 @@ apply plugin: 'java'
 // makes the default task the 'jar' task
 defaultTasks 'jar'
 
-// basic hello world
-task hello << {
-	println 'Hello world!'
-}
 
 sourceCompatibility = 1.8
-version = '1.0.1'
+version = '1.0'
 // creates jar file
 jar {
 	manifest {
-		attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain'
+		attributes 'Implementation-Title': 'M2', 'Implementation-Version': version , 'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 'Class-Path' : '../../lib/resources.jar'
 	}
 }
 
 dependencies {
-	compile files('.lib.resources.jar')
-	compile fileTree(dir: 'lib', include: '*.jar')
+	compile files('lib/resources.jar')
+}
+
+repositories {
+	mavenCentral()
 }
